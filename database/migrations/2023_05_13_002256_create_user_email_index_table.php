@@ -14,7 +14,7 @@ return new class extends Migration
     {
         DB::unprepared("CREATE UNIQUE INDEX user_email_index 
                         ON users(email) 
-                        WHERE deleted_ad IS NULL
+                        WHERE deleted_at IS NULL
         ");
     }
 
