@@ -17,9 +17,7 @@ class ClientController extends Controller
      */
     public function index(): View
     {
-        $clients = Client::with('user', 'address')->paginate(10);
-
-        return view('clients.index', compact('clients'));
+        return view('clients.index');
     }
 
     /**

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SaleController;
 use App\Models\SalesCommission;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClientController;
@@ -31,6 +32,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::resource('/clients', ClientController::class);
+    Route::resource('/sales', SaleController::class);
+
 
     Route::get('/chart', function() {
 
